@@ -40,7 +40,7 @@ const displayPoints = (points: number): ReactNode => {
     return templates.sort(() => 0.5 - Math.random())[0];
 };
 
-export const GuildLeaderboard = async ({ params }: { params: GuildLeaderboardParams }) => {
+const GuildLeaderboard = async ({ params }: { params: GuildLeaderboardParams }) => {
     const { guild } = params;
     const leaderboard = await getLeaderboard(guild);
     const patterns: Record<string, DigitPatternDto> = (await getPatterns()).patterns.reduce((merged, pattern) => {
