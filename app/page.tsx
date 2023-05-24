@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main>
-      Dubs bot
-    </main>
+    <h1>
+      Loading guilds...
+    </h1>
   )
 }

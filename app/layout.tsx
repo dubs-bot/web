@@ -18,8 +18,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <link rel="icon" href="/favicon.png" sizes="any" />
-      <body className={classnames(inter.className)}>
-        {children}
+      <body className={classnames(inter.className, "bg-discord-black text-discord-text flex flex-col items-stretch justify-stretch min-h-screen p-8 lg:p-10 container mx-auto")}>
+        <header className="bg-discord-primary text-white p-4 rounded-t-xl">
+          <h1 className="text-2xl font-black">Dubs bot</h1>
+        </header>
+        <main className="flex-grow bg-discord-dark rounded-b-xl p-4">
+          {children}
+        </main>
       </body>
     </html>
   )
