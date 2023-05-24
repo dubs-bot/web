@@ -22,7 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <header className="bg-discord-primary text-white p-4 rounded-t-xl">
           <h1 className="text-2xl font-black">Dubs bot</h1>
         </header>
-        <main className="flex-grow bg-discord-dark rounded-b-xl p-4">
+        <main className="flex flex-col flex-grow bg-discord-dark rounded-b-xl p-4">
           {children}
         </main>
       </body>
