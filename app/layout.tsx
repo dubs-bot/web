@@ -17,6 +17,7 @@ export type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.png" sizes="any" />
       <body className={classnames(inter.className)}>
         {children}
       </body>
