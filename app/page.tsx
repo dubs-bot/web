@@ -3,6 +3,7 @@
 import { GuildDto, getGuilds } from '@/lib/api';
 import { useEffect, useState } from 'react'
 import { Loading } from '../components/loading';
+import GuildsList from '@/components/guilds';
 
 export default function Home() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -15,7 +16,7 @@ export default function Home() {
           setGuilds(response.guilds);
           setLoading(false);
         }),
-        2000
+        1000
       )
     }
   }, [guilds, setGuilds]);
@@ -23,6 +24,6 @@ export default function Home() {
   return (
     loading 
     ? <Loading message="Loading guilds..."/> 
-    : <>{JSON.stringify(guilds)}</>
+    : <GuildsList guilds={guilds!}/>
   )
 }
