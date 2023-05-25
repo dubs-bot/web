@@ -4,19 +4,22 @@ import twemoji from "twemoji";
 
 export type TwemojiProps = {
     emoji: string;
+    large?: boolean;
 };
 
-const U200D = String.fromCharCode(0x200d);
-const UFE0Fg = /\uFE0F/g;
-
-export const Twemoji: FC<TwemojiProps> = ({ emoji }) => {
-    const code = twemoji.convert.toCodePoint(emoji.indexOf(U200D) < 0 ? emoji.replace(UFE0Fg, '') : emoji);
+export const Twemoji: FC<TwemojiProps> = ({ emoji, large = false }) => {
+    const size = large ? 32 : 16;
+    const code = twemoji.convert.toCodePoint(
+        emoji.indexOf(String.fromCharCode(0x200d)) < 0
+            ? emoji.replace(/\uFE0F/g, '')
+            : emoji
+    );
 
     return (
         <Image
             src={`https://twemoji.maxcdn.com/v/latest/svg/${code}.svg`}
-            height="16"
-            width="16"
+            height={size}
+            width={size}
             alt={emoji}
         />
     );
