@@ -45,6 +45,7 @@ const GuildLeaderboards: NextPage<GuildLeaderboardsProps> = ({ guilds }) => {
         <>
             <Head>
                 <title>Dubs bot | Leaderboards</title>
+                <link rel="icon" href="/favicon.png" sizes="any" />
             </Head>
             <div className="bg-discord-black text-discord-text flex flex-col items-center justify-center min-h-screen p-8 lg:p-10 gap-8">
                 <Link href="/" className="flex flex-col md:flex-row items-center justify-center gap-4">
