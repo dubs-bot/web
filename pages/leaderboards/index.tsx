@@ -2,7 +2,7 @@
 import Twemoji from "@/components/twemoji";
 import Head from "next/head";
 import Link from "next/link";
-import { useState, type FC } from "react";
+import { type FC } from "react";
 import classnames from "classnames";
 import { getGuilds, type GuildDto } from "@/lib/api";
 import { GetServerSideProps } from "next";
