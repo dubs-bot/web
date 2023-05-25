@@ -88,8 +88,7 @@ const GuildLeaderboard: NextPage<GuildLeaderboardProps> = ({ leaderboard, patter
                     <h1 className="text-5xl font-black text-white">Dubs bot</h1>
                 </Link>
 
-
-                <div className="grid grid-cols-1 w-full md:w-2/3 xl:w-1/2 gap-4 flex-grow content-start bg-discord-light p-8 rounded-lg">
+                <div className="grid grid-cols-1 w-full md:w-2/3 xl:w-1/2 gap-4 flex-grow content-start bg-discord-dark p-8 rounded-lg">
                     {seed === null
                         ? <Loading message="Loading leaderboard..." />
                         : entries.map(entry =>

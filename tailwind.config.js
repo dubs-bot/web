@@ -13,8 +13,9 @@ module.exports = {
           dark: "#2b2d31",
           light: "#313338",
           text: "#80848e",
-          primary: "#5865f2"
-        }
+          primary: "#5865f2",
+        },
+        dubs: "#3b88c3"
       }
     },
   },
