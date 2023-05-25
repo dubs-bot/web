@@ -5,7 +5,7 @@ import Link from "next/link";
 import { type FC } from "react";
 import classnames from "classnames";
 import { getGuilds, type GuildDto } from "@/lib/api";
-import { GetServerSideProps } from "next";
+import { type GetServerSideProps, type NextPage } from "next";
 
 type GuildLinkProps = {
     id: string;
@@ -40,7 +40,7 @@ type GuildLeaderboardsProps = {
     guilds: Array<GuildDto>;
 };
 
-const GuildLeaderboards: FC<GuildLeaderboardsProps> = ({ guilds }) => {
+const GuildLeaderboards: NextPage<GuildLeaderboardsProps> = ({ guilds }) => {
     return (
         <>
             <Head>
