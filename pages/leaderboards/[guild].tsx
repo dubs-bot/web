@@ -98,6 +98,10 @@ const GuildLeaderboard: NextPage<GuildLeaderboardProps> = ({ leaderboard, patter
                                     <strong className={`font-bold text-sm ${randomColor(seed + entry.user.name)}`}>{entry.user.name}</strong>
                                     <p className="text-white text-sm">{displayPoints(entry.points, seed + entry.user.name)}</p>
                                     <div className="flex flex-row items-center flex-wrap gap-1">
+                                        <div className="flex flex-row items-center py-1 px-2 bg-discord-black rounded-lg gap-2">
+                                            <Twemoji emoji="🍀" />
+                                            <div className="text-xs font-bold">1</div>
+                                        </div>
                                         {entry.matches.map(match =>
                                             <div key={match.id} className="flex flex-row items-center py-1 px-2 bg-discord-black rounded-lg gap-2">
                                                 <Twemoji emoji={match.pattern.emoji} />
