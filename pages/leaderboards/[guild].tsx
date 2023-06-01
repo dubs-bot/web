@@ -83,8 +83,8 @@ const GuildLeaderboard: NextPage<GuildLeaderboardProps> = ({ leaderboard, patter
             </Head>
             <div className="bg-discord-black text-discord-text flex flex-col items-center justify-center min-h-screen p-8 lg:p-10 gap-8">
                 <Link href="/" className="flex flex-col md:flex-row items-center justify-center gap-4">
-                    <Twemoji emoji={"🍀"} large />
-                    <Twemoji emoji={"2️⃣"} large />
+                    <Twemoji emoji="🍀" large />
+                    <Twemoji emoji="2️⃣" large />
                     <h1 className="text-5xl font-black text-white">Dubs bot</h1>
                 </Link>
 
